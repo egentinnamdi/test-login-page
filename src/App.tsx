@@ -7,7 +7,12 @@ import SignUp from "./pages/SignUp";
 
 export default function App() {
   return (
-    <Container disableGutters maxWidth="xl" className=" h-screen py-2">
+    <Container
+      component="div"
+      disableGutters
+      maxWidth="xl"
+      className=" min-!h-screen lg:h-screen py-2 flex flex-col justify-center"
+    >
       <SignUp />
     </Container>
   );

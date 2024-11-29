@@ -8,7 +8,7 @@ function PrimaryBtn(prop: Properties) {
   return (
     <Button
       variant="contained"
-      className="!bg-primary w-2/4 !p-4 !text-lg !capitalize !rounded-2xl"
+      className="!bg-primary w-full !p-4 !text-lg !capitalize !rounded-2xl !shadow-lg hover:!shadow-2xl transition-all !duration-200"
     >
       {children}
     </Button>
