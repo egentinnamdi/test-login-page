@@ -2,6 +2,7 @@ import { Box, Checkbox, Typography } from "@mui/material";
 import InputField from "../components/InputField";
 import PrimaryBtn from "../components/PrimaryBtn";
 import Header from "../components/Header";
+import { VisibilityOffOutlined } from "@mui/icons-material";
 
 const details: Array<string> = ["name", "email", "phone number", "password"];
 export default function SignUp() {
@@ -17,7 +18,18 @@ export default function SignUp() {
       <Box className="lg:w-2/4 w-full flex justify-center lg:items-start items-center  lg:pl-10 flex-col gap-6">
         <Header text="sign up" />
         {details.map((item) => (
-          <InputField key={item}>{item}</InputField>
+          <InputField
+            key={item}
+            icon={
+              item === "password" ? (
+                <VisibilityOffOutlined className="text-textColor" />
+              ) : (
+                ""
+              )
+            }
+          >
+            {item}
+          </InputField>
         ))}
         <Box className="w-3/4 lg:w-2/4  space-y-5 ">
           <Box className="flex gap-2">
